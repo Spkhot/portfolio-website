@@ -13,12 +13,12 @@ let explosionTime = 0;
 let originalParticlePositions = [];
 
 // Typewriter Roles Array for Soham Khot
-const roles = ["Building Products", "Solving Real Problems", "Startup Enthusiast", "Full Stack Developer"];
+const roles = ["Building Products"];
 let roleIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
-let typingDelay = 100;
-let erasingDelay = 50;
+let typingDelay = 50000;
+let erasingDelay = 50000;
 let newTextDelay = 2000;
 
 // --- Initialize Application ---
