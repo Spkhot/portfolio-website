@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soham Khot | Software Developer & Entrepreneur</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Portfolio of Soham Khot - Software Developer, Full Stack Developer, and Entrepreneur. Pursuing B.Tech ECE, building products like TapType, The Habit Loop, and FoodConnect.">
+  <meta name="keywords" content="Soham Khot, Software Developer, Full Stack Developer, Entrepreneur, B.Tech ECE, TapType, The Habit Loop, FoodConnect, LeetCode 315, Pune, Maharashtra, India">
+  <meta name="author" content="Soham Khot">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/Spkhot">
+  <meta property="og:title" content="Soham Khot | Software Developer & Entrepreneur">
+  <meta property="og:description" content="Explore Soham Khot's engineering projects, technical stack, professional journey, and LeetCode problem-solving stats.">
+  <meta property="og:image" content="developer_avatar.png">
+
+  <!-- Custom Base64 Monogram "S" Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='25' fill='%23030014'/%3E%3Cpath d='M30 65 C 30 50, 70 60, 70 45 C 70 35, 55 35, 45 40 C 35 45, 30 35, 40 30 C 55 20, 80 25, 80 45 C 80 60, 40 50, 40 65 C 40 75, 55 75, 65 70 C 75 65, 80 75, 70 80 C 55 90, 30 85, 30 65 Z' fill='%2300f2fe'/%3E%3C/svg%3E">
+  
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- GSAP for Smooth Animations & Counter Triggers -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  
+  <!-- Import map for modern ESM Three.js -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Loading Preloader -->
+  <div id="preloader">
+    <div class="loader-content">
+      <div class="spinner"></div>
+      <p class="loader-text">Loading Soham's Space...</p>
+    </div>
+  </div>
+
+  <!-- WebGL Background Canvas -->
+  <div id="webgl-container"></div>
+  <div class="vignette"></div>
+
+  <!-- Header / Navigation -->
+  <header>
+    <a href="#" class="logo">
+      <span></span>SOHAM.DEV
+    </a>
+    
+    <nav id="nav-links">
+      <a href="#hero" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#journey">Journey</a>
+      <a href="#leetcode">LeetCode</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    
+    <div class="header-actions">
+      <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fa-solid fa-bars-staggered"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-tagline">
+        <span></span>Innovate &middot; Code &middot; Build
+      </div>
+      <h1 class="hero-title">
+        Soham Khot
+      </h1>
+      <h2 class="hero-typing">
+        I am focused on <span id="typewriter" class="gradient-text-clip"></span><span class="typing-cursor">|</span>
+      </h2>
+      <p class="hero-desc">
+        "Building products, solving problems, and turning ideas into reality." Pursuing engineering with a high-performance full-stack web and systems building mindset.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">
+          View Projects <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="https://drive.google.com/file/d/1rmeTWLhWuMutfUj3s-YaROCRxkFnSE6r/view"
+   target="_blank"
+   class="btn btn-secondary">
+   <i class="fa-solid fa-file"></i>
+   View Resume
+</a>
+        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+      </div>
+      <div class="hero-social-links-row">
+        <a href="https://github.com/Spkhot" class="hero-social-btn glass-panel" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sohamkhot75/" class="hero-social-btn glass-panel" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://leetcode.com/u/sohamkhot_57/" class="hero-social-btn glass-panel" target="_blank" aria-label="LeetCode"><i class="fa-solid fa-code"></i></a>
+      </div>
+    </div>
+    
+    <div class="hero-avatar-container">
+      <div class="avatar-glass-frame glass-panel">
+        <img src="developer_avatar.png" alt="Soham Khot Avatar" class="hero-avatar">
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="about-visual">
+      <div class="about-image-card glass-panel">
+        <i class="fa-solid fa-rocket"></i>
+        <h3>Founder Mindset</h3>
+        <p>Combining engineering systems expertise with startup execution to conceptualize and deploy products addressing real-world needs.</p>
+      </div>
+    </div>
+    
+    <div class="about-info">
+      <div class="section-header">
+        <span class="section-subtitle">Core Identity</span>
+        <h2 class="section-title">About <span>Me</span></h2>
+      </div>
+      
+      <p class="about-text">
+        I am a passionate Software Developer and entrepreneur currently pursuing a B.Tech in Electronics and Computer Engineering. I thrive at the intersections of structural engineering and business strategy, building software architectures that are optimized, scalable, and responsive.
+      </p>
+      
+      <div class="about-grid">
+        <div class="about-card glass-panel">
+          <h4><i class="fa-solid fa-graduation-cap"></i> SITCOE Student</h4>
+          <p>Sharad Institute of Technology College of Engineering, ECE Class of 2026. Structuring computer science principles.</p>
+        </div>
+        <div class="about-card glass-panel">
+          <h4><i class="fa-solid fa-lightbulb"></i> Product Creator</h4>
+          <p>Passionate about building functional solutions like TapType and database systems for data telemetry.</p>
+        </div>
+      </div>
+      
+      <div class="interests-wrapper">
+        <span class="interests-title">Core Interests</span>
+        <div class="interests-grid-tags">
+          <span class="interest-tag glass-panel"><i class="fa-solid fa-layer-group"></i> Full Stack Development</span>
+          <span class="interest-tag glass-panel"><i class="fa-solid fa-gears"></i> Backend Engineering</span>
+          <span class="interest-tag glass-panel"><i class="fa-solid fa-sitemap"></i> System Design</span>
+          <span class="interest-tag glass-panel"><i class="fa-solid fa-brain"></i> Artificial Intelligence</span>
+          <span class="interest-tag glass-panel"><i class="fa-solid fa-chart-line"></i> Startups & Product Building</span>
+          <span class="interest-tag glass-panel"><i class="fa-solid fa-terminal"></i> Data Structures & Algorithms</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Counter Section -->
+  <section id="stats-counter" style="min-height: auto; padding: 60px 8%;">
+    <div class="stats-grid" style="grid-template-columns: repeat(4, 1fr);">
+      <div class="stat-card glass-panel">
+        <span class="stat-num" data-target="315">315</span><span class="stat-plus">+</span>
+        <p>LeetCode Solved</p>
+      </div>
+      <div class="stat-card glass-panel">
+        <span class="stat-num" data-target="5">7</span><span class="stat-plus">+</span>
+        <p>Projects Built</p>
+      </div>
+      <div class="stat-card glass-panel">
+        <span class="stat-num" data-target="2">2</span><span class="stat-plus">+</span>
+        <p>Years Learning Dev</p>
+      </div>
+      <div class="stat-card glass-panel">
+        <span class="stat-num" data-target="100">100</span><span class="stat-plus">%</span>
+        <p>Passion For Building</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="section-header" style="margin-bottom: 50px;">
+      <span class="section-subtitle">Expertise</span>
+      <h2 class="section-title">Technical <span>Stack</span></h2>
+    </div>
+    
+    <div class="skills-container-grid">
+      <!-- Programming Languages -->
+      <div class="skills-category-card glass-panel">
+        <h3><i class="fa-solid fa-terminal"></i> Programming</h3>
+        <div class="skills-list">
+          <div class="skill-item"><span>C++</span><div class="bar-container"><div class="bar-fill" data-width="85%"></div></div></div>
+          <div class="skill-item"><span>Python</span><div class="bar-container"><div class="bar-fill" data-width="80%"></div></div></div>
+          <div class="skill-item"><span>SQL</span><div class="bar-container"><div class="bar-fill" data-width="88%"></div></div></div>
+          <div class="skill-item"><span>JavaScript</span><div class="bar-container"><div class="bar-fill" data-width="85%"></div></div></div>
+        </div>
+      </div>
+
+      <!-- Frontend -->
+      <div class="skills-category-card glass-panel">
+        <h3><i class="fa-solid fa-code"></i> Frontend</h3>
+        <div class="skills-list">
+          <div class="skill-item"><span>HTML5 / CSS3</span><div class="bar-container"><div class="bar-fill" data-width="95%"></div></div></div>
+          <div class="skill-item"><span>Tailwind CSS</span><div class="bar-container"><div class="bar-fill" data-width="92%"></div></div></div>
+          <div class="skill-item"><span>React.js</span><div class="bar-container"><div class="bar-fill" data-width="84%"></div></div></div>
+        </div>
+      </div>
+
+      <!-- Backend & Database -->
+      <div class="skills-category-card glass-panel">
+        <h3><i class="fa-solid fa-server"></i> Backend & Database</h3>
+        <div class="skills-list">
+          <div class="skill-item"><span>Node.js / Express.js</span><div class="bar-container"><div class="bar-fill" data-width="85%"></div></div></div>
+          <div class="skill-item"><span>REST APIs</span><div class="bar-container"><div class="bar-fill" data-width="90%"></div></div></div>
+          <div class="skill-item"><span>MongoDB</span><div class="bar-container"><div class="bar-fill" data-width="82%"></div></div></div>
+          <div class="skill-item"><span>MySQL / SQL Server</span><div class="bar-container"><div class="bar-fill" data-width="85%"></div></div></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Tools Substack -->
+    <div class="tools-substack-wrapper">
+      <span class="tools-title">Engineering Tools</span>
+      <div class="tools-grid-tags">
+        <span class="tool-tag glass-panel"><i class="fa-brands fa-git-alt"></i> Git</span>
+        <span class="tool-tag glass-panel"><i class="fa-brands fa-github"></i> GitHub</span>
+        <span class="tool-tag glass-panel"><i class="fa-solid fa-laptop-code"></i> Postman</span>
+        <span class="tool-tag glass-panel"><i class="fa-solid fa-database"></i> SSMS</span>
+        <span class="tool-tag glass-panel"><i class="fa-solid fa-code"></i> VS Code</span>
+        <span class="tool-tag glass-panel"><i class="fa-solid fa-robot"></i> ChatGPT</span>
+        <span class="tool-tag glass-panel"><i class="fa-solid fa-microchip"></i> Claude</span>
+        <span class="tool-tag glass-panel"><i class="fa-solid fa-brain"></i> Gemini</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section (With Dynamic Filters) -->
+  <section id="projects">
+    <div class="section-header">
+      <span class="section-subtitle">Portfolio Showcase</span>
+      <h2 class="section-title">Featured <span>Projects</span></h2>
+    </div>
+    
+    <!-- Filter Bar -->
+    <div class="projects-filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web">Web Dev</button>
+      <button class="filter-btn" data-filter="cpp">C++ & Systems</button>
+      <button class="filter-btn" data-filter="db">Database / SQL</button>
+    </div>
+    
+    <div class="projects-grid">
+      <!-- Project 1 (TapType) -->
+      <article class="project-card glass-panel" data-category="cpp">
+        <div class="project-media">
+          <div class="project-media-glow"></div>
+          <i class="fa-solid fa-keyboard"></i>
+        </div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="project-tag">C++</span>
+            <span class="project-tag">Win32 API</span>
+            <span class="project-tag">Windows Programming</span>
+          </div>
+          <h3 class="project-title">TapType</h3>
+          <p class="project-desc">
+            A Windows productivity application that tracks key press duration in real time and intelligently switches letter cases to improve typing efficiency.
+          </p>
+          <ul class="project-features-list">
+            <li><i class="fa-solid fa-circle-check"></i> Real-time Key Detection</li>
+            <li><i class="fa-solid fa-circle-check"></i> Keyboard Hooking</li>
+            <li><i class="fa-solid fa-circle-check"></i> Tray Support & Installer</li>
+          </ul>
+          <div class="project-buttons">
+            <a href="https://tap-type.vercel.app/" target="_blank" class="project-btn-demo"><i class="fa-solid fa-globe"></i> Live Demo</a>
+            <a href="https://github.com/Spkhot" target="_blank" class="project-btn-repo"><i class="fa-brands fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2 (The Habit Loop) -->
+      <article class="project-card glass-panel" data-category="web">
+        <div class="project-media">
+          <div class="project-media-glow"></div>
+          <i class="fa-solid fa-rotate"></i>
+        </div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="project-tag">Node.js</span>
+            <span class="project-tag">Express.js</span>
+            <span class="project-tag">MongoDB</span>
+            <span class="project-tag">JavaScript</span>
+          </div>
+          <h3 class="project-title">The Habit Loop</h3>
+          <p class="project-desc">
+            A habit-building and productivity platform that helps users track habits, maintain consistency, and improve daily routines.
+          </p>
+          <ul class="project-features-list">
+            <li><i class="fa-solid fa-circle-check"></i> Habit Tracking & Analytics</li>
+            <li><i class="fa-solid fa-circle-check"></i> User-Friendly Dashboard</li>
+            <li><i class="fa-solid fa-circle-check"></i> Progress Monitoring</li>
+          </ul>
+          <div class="project-buttons">
+            <a href="https://thehabitloop.onrender.com/" target="_blank" class="project-btn-demo"><i class="fa-solid fa-globe"></i> Live Demo</a>
+            <a href="https://github.com/Spkhot" target="_blank" class="project-btn-repo"><i class="fa-brands fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3 (FoodConnect) -->
+      <article class="project-card glass-panel" data-category="web">
+        <div class="project-media">
+          <div class="project-media-glow"></div>
+          <i class="fa-solid fa-utensils"></i>
+        </div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="project-tag">React.js</span>
+            <span class="project-tag">Node.js</span>
+            <span class="project-tag">Express.js</span>
+            <span class="project-tag">MongoDB</span>
+          </div>
+          <h3 class="project-title">FoodConnect</h3>
+          <p class="project-desc">
+            A full-stack social media platform for food creators and businesses where users upload videos, explore reels, and manage profiles.
+          </p>
+          <ul class="project-features-list">
+            <li><i class="fa-solid fa-circle-check"></i> Authentication & Security</li>
+            <li><i class="fa-solid fa-circle-check"></i> Video Uploads & Reels Feed</li>
+            <li><i class="fa-solid fa-circle-check"></i> Creator Profiles</li>
+          </ul>
+          <div class="project-buttons">
+            <a href="https://github.com/Spkhot" target="_blank" class="project-btn-repo"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="#contact" class="project-btn-details"><i class="fa-solid fa-circle-info"></i> Details</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 4 (Football Database) -->
+      <article class="project-card glass-panel" data-category="db">
+        <div class="project-media">
+          <div class="project-media-glow"></div>
+          <i class="fa-solid fa-circle-nodes"></i>
+        </div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="project-tag">SQL Server</span>
+            <span class="project-tag">T-SQL</span>
+            <span class="project-tag">SSMS</span>
+          </div>
+          <h3 class="project-title">Football Analytics Database</h3>
+          <p class="project-desc">
+            A database system with 9 interconnected tables designed for player performance analysis, club statistics, transfers, and awards.
+          </p>
+          <ul class="project-features-list">
+            <li><i class="fa-solid fa-circle-check"></i> Database Normalization</li>
+            <li><i class="fa-solid fa-circle-check"></i> Advanced SQL Queries</li>
+            <li><i class="fa-solid fa-circle-check"></i> Performance Reporting</li>
+          </ul>
+          <div class="project-buttons">
+            <a href="https://github.com/Spkhot" target="_blank" class="project-btn-repo"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="#contact" class="project-btn-details"><i class="fa-solid fa-circle-info"></i> Details</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Journey Section (Experience & Education Side-by-Side) -->
+  <section id="journey">
+    <div class="journey-grid">
+      <!-- Column 1: Experience -->
+      <div class="journey-column">
+        <div class="section-header">
+          <span class="section-subtitle">Career Path</span>
+          <h2 class="section-title">Professional <span>Experience</span></h2>
+        </div>
+        
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-panel">
+              <span class="timeline-date">August 2025 – Present</span>
+              <h3 class="timeline-role">Software Developer</h3>
+              <span class="timeline-company">TechFusion</span>
+              <ul class="timeline-bullets" style="margin-top: 10px; list-style-type: none; padding-left: 0;">
+                <li style="margin-bottom: 8px;"><i class="fa-solid fa-caret-right" style="color: var(--color-primary); margin-right: 8px;"></i> Develop and maintain web applications</li>
+                <li style="margin-bottom: 8px;"><i class="fa-solid fa-caret-right" style="color: var(--color-primary); margin-right: 8px;"></i> Build scalable backend systems</li>
+                <li style="margin-bottom: 8px;"><i class="fa-solid fa-caret-right" style="color: var(--color-primary); margin-right: 8px;"></i> Design REST APIs</li>
+                <li style="margin-bottom: 8px;"><i class="fa-solid fa-caret-right" style="color: var(--color-primary); margin-right: 8px;"></i> Collaborate with cross-functional teams</li>
+                <li style="margin-bottom: 8px;"><i class="fa-solid fa-caret-right" style="color: var(--color-primary); margin-right: 8px;"></i> Implement secure and optimized solutions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column 2: Education -->
+      <div class="journey-column">
+        <div class="section-header">
+          <span class="section-subtitle">Academic Path</span>
+          <h2 class="section-title">My <span>Education</span></h2>
+        </div>
+        
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-panel">
+              <span class="timeline-date">2022 – 2026</span>
+              <h3 class="timeline-role">B.Tech Electronics & Computer Engineering</h3>
+              <span class="timeline-company">Sharad Institute of Technology College of Engineering</span>
+              <p style="margin-top: 10px;">
+                Focusing on digital logic design, microcontrollers, embedded platforms, relational databases, data structures, and core software programming concepts.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LeetCode Section -->
+  <section id="leetcode">
+    <div class="section-header">
+      <span class="section-subtitle">Performance stats</span>
+      <h2 class="section-title">LeetCode <span>Profile</span></h2>
+    </div>
+    
+    <div class="leetcode-grid">
+      <!-- Metrics Card -->
+      <div class="leetcode-card metrics glass-panel">
+        <div class="circular-progress-container">
+          <div class="circular-progress">
+            <div class="value-container">315+</div>
+          </div>
+          <span class="progress-label">Problems Solved</span>
+        </div>
+        <div class="metrics-info">
+          <h3>Competitive Coding Focus</h3>
+          <p>
+            Regularly practicing algorithmic tasks on arrays, hash maps, binary trees, dynamic programming, and graphs. Maintained focus on achieving optimal time and space complexity scales.
+          </p>
+          <div class="badge-row" style="margin-top: 20px; display: flex; gap: 12px;">
+            <span class="lc-badge"><i class="fa-solid fa-award"></i> Array Solver</span>
+            <span class="lc-badge"><i class="fa-solid fa-award"></i> SQL Query Expert</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Profile Card -->
+      <div class="leetcode-card profile glass-panel">
+        <div class="lc-header">
+          <div class="lc-logo"><i class="fa-solid fa-code"></i></div>
+          <div>
+            <h3>Soham Khot</h3>
+            <p class="lc-handle">@sohamkhot_57</p>
+          </div>
+        </div>
+        <div class="lc-achieve-box" style="margin-top: 20px;">
+          <h4 style="margin-bottom: 12px;">Key Metrics & Focus</h4>
+          <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 8px; font-size: 0.9rem;"><i class="fa-solid fa-check" style="color:#ffa116; margin-right: 8px;"></i> Problem Count: 315+ Solved</li>
+            <li style="margin-bottom: 8px; font-size: 0.9rem;"><i class="fa-solid fa-check" style="color:#ffa116; margin-right: 8px;"></i> Badges: 50 & 100 Days Streak</li>
+            <li style="margin-bottom: 8px; font-size: 0.9rem;"><i class="fa-solid fa-check" style="color:#ffa116; margin-right: 8px;"></i> Focus: Competitive Programming & System Design</li>
+          </ul>
+        </div>
+        <a href="https://leetcode.com/u/sohamkhot_57/" class="btn btn-primary" target="_blank" style="width: 100%; margin-top: 24px;">
+          View LeetCode Profile <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements">
+    <div class="section-header">
+      <span class="section-subtitle">Recognition</span>
+      <h2 class="section-title">Key <span>Achievements</span></h2>
+    </div>
+    
+    <div class="achievements-list-upgraded">
+      <!-- Item 1 -->
+      <div class="achievement-card-upgraded glass-panel">
+        <div class="ach-icon"><i class="fa-solid fa-trophy"></i></div>
+        <div class="ach-text">
+          <h3>Solved 315+ LeetCode Problems</h3>
+          <p>Consistently practicing algorithms, competitive programming concepts, and complex data structure integrations.</p>
+        </div>
+      </div>
+      
+      <!-- Item 2 -->
+      <div class="achievement-card-upgraded glass-panel">
+        <div class="ach-icon"><i class="fa-solid fa-award"></i></div>
+        <div class="ach-text">
+          <h3>2nd Prize Winner – Aditya'23 Tech Fest</h3>
+          <p>Won second prize at the National-Level Technical Festival in coding and software showcase competitions.</p>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="achievement-card-upgraded glass-panel">
+        <div class="ach-icon"><i class="fa-solid fa-rocket"></i></div>
+        <div class="ach-text">
+          <h3>PHN Hackathon Participant</h3>
+          <p>Collaboratively designed and implemented frontend-backend models under strict project deadline limits.</p>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="achievement-card-upgraded glass-panel">
+        <div class="ach-icon"><i class="fa-solid fa-certificate"></i></div>
+        <div class="ach-text">
+          <h3>Postman API Fundamentals Student Expert</h3>
+          <p>Certified in REST architectures, endpoints requests design, routing structures, and API collections testing.</p>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="achievement-card-upgraded glass-panel">
+        <div class="ach-icon"><i class="fa-solid fa-people-group"></i></div>
+        <div class="ach-text">
+          <h3>Founded and Led Tech Team</h3>
+          <p>Directed a group of software creators executing and delivering actual projects for external clients.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="contact-info">
+      <div class="section-header">
+        <span class="section-subtitle">Reach Out</span>
+        <h2 class="section-title">Let's <span>Connect</span></h2>
+      </div>
+      <p class="contact-info-desc">
+        Interested in hiring a developer, exploring a startup idea, or discussing product engineering? Get in touch and let's build something exceptional.
+      </p>
+      
+      <div class="contact-details">
+        <div class="contact-detail-item">
+          <div class="contact-icon glass-panel">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div class="contact-detail-text">
+            <h4>Email</h4>
+            <p><a href="mailto:sohamkhot75@gmail.com" class="contact-link">sohamkhot75@gmail.com</a></p>
+          </div>
+        </div>
+        <div class="contact-detail-item">
+          <div class="contact-icon glass-panel">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <div class="contact-detail-text">
+            <h4>Phone</h4>
+            <p><a href="tel:+919901341404" class="contact-link">+91 9901341404</a></p>
+          </div>
+        </div>
+        <div class="contact-detail-item">
+          <div class="contact-icon glass-panel">
+            <i class="fa-solid fa-map-location-dot"></i>
+          </div>
+          <div class="contact-detail-text">
+            <h4>Location</h4>
+            <p>Maharashtra, India</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="social-links">
+        <a href="https://github.com/Spkhot" class="social-btn glass-panel" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sohamkhot75/" class="social-btn glass-panel" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://leetcode.com/u/sohamkhot_57/" class="social-btn glass-panel" target="_blank" aria-label="LeetCode"><i class="fa-solid fa-code"></i></a>
+      </div>
+    </div>
+    
+    <div class="contact-form-container">
+      <form id="contact-form" class="contact-form-card glass-panel" autocomplete="off">
+        <div class="form-group">
+          <input type="text" id="form-name" class="form-input" placeholder=" " required>
+          <label for="form-name" class="form-label">Name</label>
+        </div>
+        <div class="form-group">
+          <input type="email" id="form-email" class="form-input" placeholder=" " required>
+          <label for="form-email" class="form-label">Email</label>
+        </div>
+        <div class="form-group">
+          <input type="text" id="form-subject" class="form-input" placeholder=" " required>
+          <label for="form-subject" class="form-label">Subject</label>
+        </div>
+        <div class="form-group">
+          <textarea id="form-message" class="form-input" placeholder=" " required></textarea>
+          <label for="form-message" class="form-label">Message</label>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+          Send Button <i class="fa-solid fa-paper-plane"></i>
+        </button>
+        <div id="form-status" class="form-status"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a href="#" class="logo"><span></span>SOHAM.DEV</a>
+        <p>"Building products that solve real-world problems."</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+      </div>
+      <div class="footer-socials">
+        <h4>Follow Me</h4>
+        <div class="footer-social-row">
+          <a href="https://github.com/Spkhot" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/sohamkhot75/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://leetcode.com/u/sohamkhot_57/" target="_blank"><i class="fa-solid fa-code"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Soham Khot. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to top Button -->
+  <button id="back-to-top" class="back-to-top-btn glass-panel" aria-label="Back to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Script entry point -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>
